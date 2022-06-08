@@ -1,0 +1,28 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "users can set tasks and organize them into projects",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Gianni Andriano",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "eslint": "^8.16.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "dependencies": {
+    "date-fns": "^2.28.0"
+  }
+}

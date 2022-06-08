@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #a5f3fc;
+    padding: 20px;
+    align-items: baseline;
+    color: #164e63;
+}
+
+.rightheader {
+    display: flex;
+}
+
+.name {
+    font-size: 40px;
+    padding-right: 15px;
+   cursor:default;
+   font-weight: 100;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.title {
+    font-size: 60px;
+    cursor: default;
+    font-weight: 600;
+}
+
+.footer {
+    color: white;
+    background-color: #164e63;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.copyright {
+    cursor: default;
+    padding-right: 10px;
+}
+/** github favicon at footer **/
+.favicon {
+    cursor: pointer;
+}
+
+/** this is where all of the projects are rendered **/
+
+#content {
+    background-color: #ecfeff;
+    height: 100%;
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    gap: 40px;
+    box-sizing: border-box;
+    padding: 40px;
+    overflow-y: auto;
+    
+}
+/** the project box itself **/
+.addbox {
+    display: flex;
+    min-width: 500px;
+    background-color: white;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid #164e63;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.addbtn, .boxtext {
+    justify-self: center;
+    align-self: center;
+}
+
+.addbox:hover {
+    margin-top: -5px;
+    box-shadow: 5px 5px 5px #164e63;
+}
+
+.addbtn {
+    font-size: 200px;
+    font-weight: 400;
+    color: #a3e635;
+}
+
+.boxtext {
+    position: relative;
+    top: -50px;
+}
+
+
+.addbox:hover > .addbtn {
+   transform: scale(1.1);
+}
+
+.addbox:hover > .boxtext {
+    font-weight: 500;
+}
+
+.formbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.projname {
+    border: none;
+    width: 90%;
+    height: 35px;
+    font-size: 30px;
+    border-right: 1px solid #164e63;
+    padding: 10px;
+    border-top-left-radius: 25px;
+    
+}
+
+.projname:focus-visible,.projduedate:focus-visible, .taskbox > input {
+   outline: none;
+   
+}
+
+.projnamebox {
+    border-bottom: 3px solid #164e63;
+    display: flex;
+}
+
+.projduedate {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding-left: 20px;
+    height: 25px;
+    font-size: 20px;
+    width: 40%;
+    border: none;
+    margin: 0;
+    padding-right: 20px;
+    cursor: pointer;
+    font-family: 'Roboto Flex', sans-serif;
+    flex: 0 1 auto;
+}
+
+.confirmbox,.editdelbox {
+    width: 25%;
+    height: 55px;
+    border-left: 1px solid #164e63;
+    border-top-right-radius: 24px;
+    
+}
+
+.confirmbox {
+    background-color: #a3e635;
+}
+
+.editdelbox {
+    display: flex;
+}
+
+.confirmproject:hover, .del:hover {
+    transform: scale(1.03);
+}
+
+.confirmproject, .del {
+    padding: 15px;
+    
+    font-size: 25px;
+    text-align: center;
+    
+    font-weight: bolder;
+    
+    
+}
+
+.confirmproject {
+    color: #3f6212;
+   
+}
+
+.del {
+    position: relative;
+    top: -8px;
+    font-size: 40px;
+    color: #dc2626;
+    background-color: #fecaca;
+    height: 33px;
+}
+
+.taskaddbutton {
+    width: 100%;
+    border-bottom: 1px solid #164e63;
+    text-align: center;
+    font-size: 50px;
+    color: #a3e635;
+    height: 50px;
+}
+
+.taskbox {
+    display: flex;
+    border-bottom: 1px solid #164e63;
+}
+
+.taskbox > input + div {
+    padding: 10px;
+}
+
+.taskbox > input {
+    border: none;
+    font-size: 20px;
+}
+
+.taskbox > input {
+    border-right: 1px solid #164e63;
+}
+
+.taskdel {
+    align-self: center;
+    justify-self: center;
+    color: #dc2626;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.taskdel:hover {
+    transform: scale(1.03);
+}
+
+.taskdelbox {
+    border-left: 1px solid #164e63;
+    display: flex;
+    background-color: #fecaca;
+}
+
+.tasktitle {
+    width: 55%;
+}
+
+input {
+    cursor: pointer;
+    font-family: 'Roboto Flex', sans-serif;
+    padding: 10px;
+}
+
+.taskduedate {
+    text-align: center;
+}
+
+.taskdone {
+    width: 25px;
+    height: 25px;
+}
+
+.projedit {
+    align-self: center;
+    justify-self: center;
+    color: #3f6212;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.projedit:hover {
+    transform: scale(1.03);
+}
+
+.editbox {
+    display: flex;
+    border-right: 1px solid #164e63;
+}
