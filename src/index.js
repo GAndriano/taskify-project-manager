@@ -583,7 +583,12 @@ const makeProject = (() => {
     }
   }
 
-  return { renderAddBox, getStorage };
+  return { renderAddBox, getStorage, populateStorage };
 })();
-window.onload = makeProject.getStorage();
+
+if (!localStorage.getItem('projects')) {
+  makeProject.populateStorage();
+} else {
+  makeProject.getStorage();
+}
 makeProject.renderAddBox();
